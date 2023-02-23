@@ -1,0 +1,7 @@
+---
+- name: "update ubuntu"
+  ansible.builtin.apt:
+    name: '*'
+    state: latest
+    update_cache: true
+    cache_valid_time: 3600

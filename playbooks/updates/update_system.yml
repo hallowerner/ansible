@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - ansible.builtin.import_role:
+        name: update_system
