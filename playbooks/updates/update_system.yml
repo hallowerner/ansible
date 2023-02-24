@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: true
-  become_user: ubuntu
+  become_user: root
   tasks:
     - ansible.builtin.include_role:
         name: "{{ item }}"
