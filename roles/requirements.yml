@@ -1,0 +1,15 @@
+---
+- src: https://github.com/geerlingguy/ansible-role-docker.git
+  scm: git
+  version: master
+  name: geerlingguy.docker
+
+- src: https://github.com/geerlingguy/ansible-role-ansible.git
+  scm: git
+  version: master
+  name: geerlingguy.ansible
+
+- src: https://github.com/geerlingguy/ansible-role-pip.git
+  scm: git
+  version: master
+  name: geerlingguy.pip
