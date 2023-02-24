@@ -4,4 +4,6 @@
   become_user: ubuntu
   tasks:
     - ansible.builtin.import_role:
-        name: update_system
+        name: "{{ item }}"
+      loop:
+        - geerlingguy.pip
