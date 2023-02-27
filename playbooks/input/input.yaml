@@ -1,0 +1,8 @@
+---
+- name: "Test Inputvariable"
+  hosts: all
+  tasks:
+    - name: "Install something"
+      ansible.builtin.apt:
+        name: "{{ PACKAGE_NAME }}"
+        state: latest
