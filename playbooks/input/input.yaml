@@ -1,5 +1,6 @@
 ---
 - name: "Test Inputvariable"
+  become: true
   hosts: all
   tasks:
     - name: "Install something"
