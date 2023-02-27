@@ -1,7 +1,5 @@
 ---
 - name: "Test Inputvariable"
-  become: true
-  become_user: ubuntu
   hosts: all
   tasks:
     - name: "Install something"
