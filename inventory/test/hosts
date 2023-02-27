@@ -1,3 +1,6 @@
 [testserver]
 192.168.191.101
 192.168.191.102
+
+[testserver:vars]
+ansible_user = ubuntu
