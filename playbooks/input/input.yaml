@@ -1,9 +1,24 @@
 ---
-- name: "Test Inputvariable"
+- name: "Update System"
   become: true
   hosts: all
   tasks:
-    - name: "Install something"
+    - name: " wait for cloud-init"
+      ansible.builtin.command: cloud-init status --wait
+      changed_when: false
+
+    - name: " update"
+      ansible.builtin.apt:
+        update_cache: true
+        force_apt_get: true
+        cache_valid_time: 3600
+
+    - name: " upgrade"
+      ansible.builtin.apt:
+        upgrade: dist
+        force_apt_get: true
+
+    - name: " install {{ PACKAGE_NAME }}"
       ansible.builtin.apt:
         name: "{{ PACKAGE_NAME }}"
-        state: latest
+        state: present
